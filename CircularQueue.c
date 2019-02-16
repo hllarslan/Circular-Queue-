@@ -2,11 +2,11 @@
 
 /** 
  * \brief 				Function for creating pointer to instance of 
- *						structure MyCircularQueue.
- *						At the beginning the front, rear, currentSize
- *						values are set to default value. size is set by user,
- *						with the input parameter sizeVal.
- * \param[in]			const int16_t sizeVal for size of buffer. 
+ *					structure MyCircularQueue.
+ *					At the beginning the front, rear, currentSize
+ *					values are set to default value. size is set by user,
+ *					with the input parameter sizeVal.
+ * \param[in]				const int16_t sizeVal for size of buffer. 
  * \return 				pointer to instance of structure MyCircularQueue.
  */
  
@@ -26,10 +26,10 @@ MyCircularQueue * myCircularQueueCreate(const int16_t sizeVal){
 
 /** 
  * \brief				Function for checking whether queue is empty
- *						or not.
- * \param[in]			Pointer to structure MyCircularQueue
- * \return              Enumeration type err_code. SUCCESS if it is ok,
- *						otherwise it is FAILED. 
+ *					or not.
+ * \param[in]				Pointer to structure MyCircularQueue
+ * \return             		        Enumeration type err_code. SUCCESS if it is ok,
+ *					otherwise it is FAILED. 
  */           
 err_code myCircularQueueIsEmpty(MyCircularQueue *obj){
 	
@@ -41,10 +41,10 @@ err_code myCircularQueueIsEmpty(MyCircularQueue *obj){
 
 /** 
  * \brief				Function for checking whether queue is full
- *						or not.
- * \param[in]			Pointer to structure MyCircularQueue
- * \return              Enumeration type err_code. SUCCESS if it is ok,
- *						otherwise it is FAILED.        
+ *					or not.
+ * \param[in]				Pointer to structure MyCircularQueue
+ * \return              		Enumeration type err_code. SUCCESS if it is ok,
+ *					otherwise it is FAILED.        
  */
 err_code myCircularQueueIsFull(MyCircularQueue *obj){
 	if(obj->currentSize == obj->size){
@@ -56,10 +56,10 @@ err_code myCircularQueueIsFull(MyCircularQueue *obj){
 
 /** 
  * \brief				Function for obtaining the front element
- *						of queue.
- * \param[in]			Pointer to structure MyCircularQueue
- * \return              If queue is empty, return -1. Otherwise,
- *						return the front element.     
+ *					of queue.
+ * \param[in]				Pointer to structure MyCircularQueue
+ * \return             			If queue is empty, return -1. Otherwise,
+ *					return the front element.     
  */
 int16_t myCircularQueueFront(MyCircularQueue* obj){
 	if(myCircularQueueIsEmpty(obj) == SUCCESS){
@@ -74,10 +74,10 @@ int16_t myCircularQueueFront(MyCircularQueue* obj){
 
 /** 
  * \brief				Function for obtaining the rear element
- *						of queue.
- * \param[in]			Pointer to structure MyCircularQueue
- * \return              If queue is empty, return -1. Otherwise,
- *						return the rear element.       
+ *					of queue.
+ * \param[in]				Pointer to structure MyCircularQueue
+ * \return             			If queue is empty, return -1. Otherwise,
+ *					return the rear element.       
  */
 int16_t myCircularQueueRear(MyCircularQueue* obj) {
 	 if(myCircularQueueIsEmpty(obj) == SUCCESS){
@@ -89,13 +89,13 @@ int16_t myCircularQueueRear(MyCircularQueue* obj) {
 
 /** 
  * \brief				Function for inserting the element
- *						to the queue.
- * \param[in]			Pointer to structure MyCircularQueue
- * \param[in]           value to be inserted.
- * \return              If queue is not full, shift the rear element
- *                      insert the value to new rear position and return
- *						SUCCESS, if it is full, return FAILED.
- *						return the rear element.       
+ *					to the queue.
+ * \param[in]				Pointer to structure MyCircularQueue
+ * \param[in]          		        value to be inserted.
+ * \return             		        If queue is not full, shift the rear element
+ *                      		insert the value to new rear position and return
+ *					SUCCESS, if it is full, return FAILED.
+ *					return the rear element.       
  */
 err_code myCircularQueueEnQueue(MyCircularQueue* obj, int value){
 	if(!myCircularQueueIsFull(obj)){
@@ -117,11 +117,11 @@ err_code myCircularQueueEnQueue(MyCircularQueue* obj, int value){
 
 /** 
  * \brief				Function for deleting the element
- *						from the queue.
- * \param[in]			Pointer to structure MyCircularQueue
- * \return              If queue is not empty, shift the front element,
- *                      shrink the current size, return SUCCESS
- *						if it is empty, return FAILED.          
+ *					from the queue.
+ * \param[in]				Pointer to structure MyCircularQueue
+ * \return              		If queue is not empty, shift the front element,
+ *                      		shrink the current size, return SUCCESS
+ *					if it is empty, return FAILED.          
  */
 err_code myCircularQueueDeQueue(MyCircularQueue* obj) {
    
@@ -139,9 +139,9 @@ err_code myCircularQueueDeQueue(MyCircularQueue* obj) {
 
 /** 
  * \brief				Function for freeing the memory
- *						allocated by dynamic memory allocation.
- * \param[in]			Pointer to structure MyCircularQueue
- * 						First free the buffer then the instance.
+ *					allocated by dynamic memory allocation.
+ * \param[in]				Pointer to structure MyCircularQueue
+ * 					First free the buffer then the instance.
  */
 void myCircularQueueFree(MyCircularQueue* obj) {
 	 
