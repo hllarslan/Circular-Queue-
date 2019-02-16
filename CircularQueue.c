@@ -1,3 +1,8 @@
+/* Author : Halil Arslan
+ * Date   : 24-01-2019
+ * Topic  : Simple CircularQueue 
+ */ 
+
 #include "CircularQueue.h"
 
 /** 
