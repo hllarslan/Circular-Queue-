@@ -1,4 +1,8 @@
-
+/* Author : Halil Arslan
+ * Date   : 24-01-2019
+ * Topic  : Simple CircularQueue 
+ */ 
+ 
 CC     = gcc
 LINK   = gcc
 CFLAGS = -c -Wall
